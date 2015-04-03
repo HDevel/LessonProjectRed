@@ -1,0 +1,84 @@
+#moduleWeather{
+	background-color: #fff;
+}
+#moduleWeather > div{
+    position: absolute;
+    border-radius: 3px;
+    left: 0;
+    right: 0;
+}
+#moduleWeather > .weatherCurrent{
+    top: 0;
+    bottom: 140px;
+    background-color: #e74c3c;
+}
+#moduleWeather > .weatherCurrent > .weatherCurrentIcon{
+    position: absolute;
+    top: 15.8%;
+    left: 37%;
+    right: 37%;
+    bottom: 38.2%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#moduleWeather > .weatherCurrent > .weatherCurrentTemperature{
+    position: absolute;
+    top: 70%;
+    left: 0;
+    right: 0;
+    bottom: 11.7%;
+    color: #fff;
+    font-size: 1em;
+}
+#moduleWeather > .weatherCurrent > .weatherCurrentPlace{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 200;
+}
+#moduleWeather > .weatherDay{
+    bottom: 99px;
+    background-color: #d3d5d6;
+    height: 40px;
+    font-size: 0;
+}
+#moduleWeather > .weatherDay > div{
+    display: inline-block;
+    line-height: 40px;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #7e8182;
+}
+#moduleWeather > .weatherDay > div.weatherDayCurrent,
+#moduleWeather > .weatherIcons > div.weatherDayCurrent{
+    background-color: #7e8182;
+    color: #fff;
+}
+#moduleWeather > .weatherDay > div,
+#moduleWeather > .weatherIcons > div{
+    width: 14.28%;
+}
+#moduleWeather > .weatherIcons{
+    bottom: 0;
+    background-color: #d3d5d6;
+    height: 98px;
+    font-size: 0;
+}
+#moduleWeather > .weatherIcons > div{
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    color: #7e8182;
+    height: 100%;
+}
+#moduleWeather > .weatherIcons > div > img{
+    margin-top: 20px;
+    display: inline-block;
+}
+#moduleWeather > .weatherIcons > div > div{
+    font-weight: 300;
+}
