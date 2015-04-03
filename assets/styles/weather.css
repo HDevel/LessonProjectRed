@@ -29,7 +29,6 @@
     right: 0;
     bottom: 11.7%;
     color: #fff;
-    font-size: 1em;
 }
 #moduleWeather > .weatherCurrent > .weatherCurrentPlace{
     position: absolute;
