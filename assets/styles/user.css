@@ -1,3 +1,43 @@
 #moduleUser{
 	
+}#moduleUser > div{
+	border-radius: 3px;
+	left: 0;
+	top: 0;
+}
+#moduleUser > .UserPicture > img{
+	position: absolute;
+	left:0;
+	right: 0;
+	top: 0;
+	margin: 0;
+	bottom: 220px;
+	width: 100%;
+
+}
+.Avatar { 
+	position: absolute;
+	left:15px;
+	top: 170px;
+	border: 7px solid #fff;
+	border-radius:90px;
+	font-size: 0;
+	z-index: 1;
+}
+.UserName {
+	position: absolute;
+	background-color: #e5eaeb;
+	height: 72px;
+	bottom: 147px;
+	top: 230px;
+	width: 100%;
+	border-radius: 3px;
+
+}
+.Name{
+	position: absolute;
+    color: #2c3e50;
+    padding-top: 19px;
+    right: 20%;
+    font-size: 17px;
 }
