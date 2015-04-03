@@ -1,9 +1,8 @@
 $(document).ready(function () {
-    //$('#modules > div:before').each(function (id, val) {
-    //    val.onclick = function () {
-    //        scaleModule(val, ['wSmall', 'wMedium', 'wLarge']);
-    //    }
-    //});
+    addResizeLabel();
+});
+
+function addResizeLabel(){
     $('#modules > div').each(function (id, val) {
         var wClasses = [{c:'wSmall',t:'S'}, {c:'wMedium',t:'M'}, {c:'wLarge',t:'L'}];
         var hClasses = [{c:'hSmall',t:'S'}, {c:'hMedium',t:'M'}, {c:'hLarge',t:'L'}];
@@ -34,4 +33,4 @@ $(document).ready(function () {
         $(dom).addClass(classes[mClass].c);
         $(btn).html(classes[mClass].t);
     }
-})
+}
