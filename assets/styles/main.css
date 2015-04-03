@@ -24,6 +24,7 @@ iframe{
 	margin: 10px;
 	position: relative;
 	vertical-align: top;
+	transition: width 0.5s ease-out, height 0.5s ease-out;
 }
 #modules > div > .moduleBefore,
 #modules > div > .moduleAfter{
