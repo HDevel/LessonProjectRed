@@ -1,7 +1,39 @@
 $(document).ready(function() {
     addResizeLabel();
+    addFontAdjust();
 });
 
+function addFontAdjust() {
+    $('*').each(function(id, val) {
+        adjust(val, 'fontAdjustHeight', 'height');
+        adjust(val, 'fontAdjustWidth', 'width');
+    });
+    function adjust(val, data, WH) {
+        var data = $(val).data(data);
+        if (data) {
+            var iframe = document.createElement('iframe');
+            $(iframe).css({
+                position: 'absolute',
+                'z-index': '-1',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%'
+            });
+            iframe.onload = function() {
+                this.contentWindow.onresize = function() {
+                    var is = $(val)[WH]();
+                    var fontSize = parseInt(data) * 0.01;
+                    fontSize *= is;
+                    fontSize = fontSize.toFixed(3);
+                    $(val).css('font-size', fontSize + 'px');
+                };
+                this.contentWindow.onresize();
+            };
+            $(val).append(iframe);
+        }
+    }
+}
 function addResizeLabel() {
     $('#modules > div').each(function(id, val) {
         var wClasses = [
