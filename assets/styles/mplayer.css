@@ -1,119 +1,91 @@
 #moduleMusicPlayer{
-	position: absolute;	 
-	background-color: #fff;
+    background-color: #fff;
 }
+#moduleMusicPlayer >  div{
+    position: absolute;
+}
+
+#moduleMusicPlayer > .moduleMPlayerHeadButtom{
+    border-radius: 3px;
+    left: 0px;
+    top: 0px;
+    height: 70px; 
+    width:80px;
+    background-color: #e74c3c;
+	z-index:1;
+}
+#moduleMusicPlayer > .moduleMPlayerHeadButtomSmallIcon{
+    left: 3px;
+    top: 21px;
+    height: 70px; 
+    width:80px;
+	z-index:1;
+}
+
 #moduleMusicPlayer > .moduleMPlayerHead{
-	position: absolute;	 
-	border-bottom-right-radius: 3px;
-	border-top-right-radius: 3px;
-	left: 77px;
+	border-radius: 0px 3px 3px 0px;
+    left: 77px;
     right: 0px;
-	top: 0px;
-	height: 70px; 
-    background-color: #e5eaeb;
+    top: 0px;
+    height: 70px; 
+    background-color: #e5eaeb;	
+}
+#moduleMusicPlayer > .moduleMPlayerHead >  div{
+	position: absolute;
+	left:13px;
 }
 #moduleMusicPlayer > .moduleMPlayerHead > .moduleMPlayerHeadSongName{
-	position: absolute;	 
 	top:10px;
-	left:13px;
-	color: #2c3e50;
-	font-size: 15px;
-	font-weight: 400;
+    color: #2c3e50;
+    font-size: 15px;
+    font-weight: 400;
 }
 #moduleMusicPlayer > .moduleMPlayerHead > .moduleMPlayerHeadSongAuthor{
-	position: absolute;	 
-	top:35px;
-	left:13px;
-	color: #7e8182;
-	font-size: 11px;
-	font-weight: 300;
-	text-transform: uppercase;
-}
-#moduleMusicPlayer > .moduleMPlayerHead > .moduleMPlayerHeadLineWhite{
-	position: absolute;	 
+    top:35px;
+    color: #7e8182;
+    font-size: 11px;
+    font-weight: 300;
+    text-transform: uppercase;
+}		
+#moduleMusicPlayer > .moduleMPlayerHead > .moduleMPlayerHeadIndicatorLine{
 	top: 59px;
-	left:130px;
-	right:15px;
+	right: 13px;
 	height:3px;
-	background-color: #fff;
-}	
-#moduleMusicPlayer > .moduleMPlayerHead > .moduleMPlayerHeadLineRed{
-	position: absolute;	 
-	top: 59px;
-	left:13px;
-	right:15px;
-	height:3px;
-	background-color: #e74c3c;
+	background-color: #fff;	
 }
-#moduleMusicPlayer >  .moduleMPlayerHeadRedButtom{
-	position: absolute;	 
-	border-radius: 3px;
-	left: 0px;
+#moduleMusicPlayer > .moduleMPlayerHead > .moduleMPlayerHeadIndicatorLine > div{
 	top: 0px;
-	height: 70px; 
-	width:80px;
+	left: 0px;
+	height:100%;
+}				
+#moduleMusicPlayer > .moduleMPlayerHead  >.moduleMPlayerHeadIndicatorLine > .Indicator  {
+	width:50%;
 	background-color: #e74c3c;
-	}
-#moduleMusicPlayer > .moduleMPlayerHeadRedButtomSmallIcon{
-	position: absolute;	 
-	left: 3px;
-	top: 21px;
-	height: 70px; 
-	width:80px;
-	}
-#moduleMusicPlayer > .moduleMPlayerList{ 
-	position: absolute;	 
-	border-radius: 3px;
-	top:71px;
- 	left: 0px;
-    right: 0px;
-	bottom: 0px;
-	background-color: #e5eaeb;
 }
-#moduleMusicPlayer > .moduleMPlayerList > .moduleMPlayerListTrackPosition > div {
-	position: absolute;	 
-	left:10px;
-	right:10px;
-	height:9.5%;
-	line-height: 30px; 
-	/* background-color:#e5eaeb;  */	
-	border-bottom: 1px solid #b5bdbe;
 
+
+#moduleMusicPlayer > .moduleMPlayerList{ 
+    border-radius: 3px;
+    top:71px;
+    left: 0px;
+    right: 0px;
+    bottom:0px;
+    background-color: #e5eaeb;
+	padding:5px 10px 0px 10px;
+	overflow: auto;
+}
+#moduleMusicPlayer > .moduleMPlayerList  > div {
+	border-bottom: 1px solid #b5bdbe;
+		height:35px;
+	line-height:30px;
 	text-align: left ;
+	padding-left: 10px;
 	color: #7e8182;
 	font-size: 13px;
 	font-weight: 300;
 }
-#moduleMusicPlayer > .moduleMPlayerList > .moduleMPlayerListTrackPosition > .moduleMPlayerListTrackPosition1{
-	top:0px;
-}
-#moduleMusicPlayer > .moduleMPlayerList > .moduleMPlayerListTrackPosition > .moduleMPlayerListTrackPosition2{
-	top:10%;
-}
-#moduleMusicPlayer > .moduleMPlayerList > .moduleMPlayerListTrackPosition > .moduleMPlayerListTrackPosition3{
-	top:20%;
-	background-color:#f2f6f7;
-}
-#moduleMusicPlayer > .moduleMPlayerList > .moduleMPlayerListTrackPosition > .moduleMPlayerListTrackPosition4{
-	top:30%;
-}
-#moduleMusicPlayer > .moduleMPlayerList > .moduleMPlayerListTrackPosition > .moduleMPlayerListTrackPosition5{
-	top:40%;
-}
-#moduleMusicPlayer > .moduleMPlayerList > .moduleMPlayerListTrackPosition > .moduleMPlayerListTrackPosition6{
-	top:50%;
-}
-#moduleMusicPlayer > .moduleMPlayerList > .moduleMPlayerListTrackPosition > .moduleMPlayerListTrackPosition7{
-	top:60%;
-}
-#moduleMusicPlayer > .moduleMPlayerList > .moduleMPlayerListTrackPosition > .moduleMPlayerListTrackPosition8{
-	top:70%;
-}
-#moduleMusicPlayer > .moduleMPlayerList > .moduleMPlayerListTrackPosition > .moduleMPlayerListTrackPosition9{
-	top:80%;
-}
-#moduleMusicPlayer > .moduleMPlayerList > .moduleMPlayerListTrackPosition > .moduleMPlayerListTrackPosition10{
-	top:90%;
-	border-bottom: none;
+#moduleMusicPlayer > .moduleMPlayerList  > .thistrack{
+	line-height=25px;
+	background-color: #f2f6f7;
 }
 
