@@ -76,7 +76,7 @@
 	right:10px;
 	height:9%;
 
-	background-color:none;/* #e5eaeb; */
+	/* #e5eaeb; */
 	border-bottom: 1px solid #b5bdbe;
 
 	text-align: left;
@@ -92,7 +92,7 @@
 }
 #moduleMusicPlayer > .moduleMPlayerList > .moduleMPlayerListTrackPosition > .moduleMPlayerListTrackPosition3{
 	top:20%;
-	background-color:f2f6f7;
+	background-color:#f2f6f7;
 }
 #moduleMusicPlayer > .moduleMPlayerList > .moduleMPlayerListTrackPosition > .moduleMPlayerListTrackPosition4{
 	top:30%;
