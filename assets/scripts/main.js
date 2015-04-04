@@ -1,8 +1,65 @@
 $(document).ready(function() {
     addResizeLabel();
     addFontAdjust();
+    $('.circleLoading').each(function(id, val) {
+        circleLoadingInit(val, 100, 90, 10, 4);
+    });
 });
+function circleLoadingInit(dom, radius, count, width, height) {
+    var me = dom;
+    $(me).css({
+        top: radius,
+        left: radius
+    });
+    for (var i = 0; i < count; i++) {
+        var div = document.createElement('div');
+        $(div).css({
+            width: width,
+            height: height
+        });
+        $(me).append(div);
+    }
+    $(me).data('fill', 0);
+    me.circleLoading = circleLoading;
+    me.circleLoading(1);
 
+    function circleLoading(doPercent) {
+        var me = this,
+            all = $(' > div', me),
+            total = all.length;
+        all.each(function(id, val) {
+            var percent = id / total,
+                delay = 0,
+                deg = 360 * percent;
+
+            deg -= 90;
+            deg = deg.toFixed(3);
+
+            var css = {
+                opacity: 0,
+                'transition-delay': '',
+                transform: 'rotate(' + deg + 'deg) ' +
+                'translate(' + (50 + width) + 'px, -' + (height * 0.5) + 'px)'
+            };
+
+            if ($(me).data('fill') >= doPercent) {
+                delay = (total - id);
+            } else {
+                delay = id;
+            }
+
+            delay *= 100;
+            css['transition-delay'] = delay + 'ms';
+            if (percent < doPercent) {
+                css.opacity = 1;
+                css.transform = 'rotate(' + deg + 'deg) ' +
+                'translate(' + (radius - width) + 'px, -' + (height * 0.5) + 'px)'
+            }
+            $(val).css(css);
+        });
+        $(me).data('fill', doPercent);
+    }
+}
 function addFontAdjust() {
     $('*').each(function(id, val) {
         adjust(val, 'fontAdjustHeight', 'height');

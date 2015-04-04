@@ -63,3 +63,13 @@ iframe{
 #modules > div.hLarge{
 	height: 600px;
 }
+.circleLoading{
+	position: relative;
+}
+.circleLoading > div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #f0f;
+	transition: all 500ms;
+}
