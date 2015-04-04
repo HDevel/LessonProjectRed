@@ -46,8 +46,7 @@
     font-size: 11px;
     font-weight: 300;
     text-transform: uppercase;
-}
-			
+}		
 #moduleMusicPlayer > .moduleMPlayerHead > .moduleMPlayerHeadIndicatorLine{
 	top: 59px;
 	right: 13px;
@@ -73,20 +72,20 @@
     bottom:0px;
     background-color: #e5eaeb;
 	padding:5px 10px 0px 10px;
+	overflow: auto;
 }
 #moduleMusicPlayer > .moduleMPlayerList  > div {
-border-bottom: 1px solid #b5bdbe;
-/* background-color: #f2f6f7;*/
-height:9.5%;
-line-height:30px;
-text-align: left ;
-padding-left: 10px;
-color: #7e8182;
-font-size: 13px;
-font-weight: 300;
+	border-bottom: 1px solid #b5bdbe;
+		height:35px;
+	line-height:30px;
+	text-align: left ;
+	padding-left: 10px;
+	color: #7e8182;
+	font-size: 13px;
+	font-weight: 300;
 }
 #moduleMusicPlayer > .moduleMPlayerList  > .thistrack{
-line-height=25px;
-background-color: #f2f6f7;
+	line-height=25px;
+	background-color: #f2f6f7;
 }
 
