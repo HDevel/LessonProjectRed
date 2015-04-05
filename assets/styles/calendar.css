@@ -11,6 +11,9 @@
 	height:32.25%;
 	text-align:center;
 }
+#moduleCalendar > .calendarHead > div {
+position:absolute;
+}
 .calendarMain > .calendarHead > .calendarCurrentDayID {
 	position:absolute;
 	text-align:center;
@@ -20,22 +23,21 @@
 	right:21.42%;
 	font-size:34px;
 }
-.calendarMain > .calendarHead > .calendarCurrentDayDate {
-	position:absolute;
+.calendarMain > .calendarHead > .calendarCurrentDayDate {	
 	text-align:center;
-	font-weight:300;
+	font-weight:300;	
 	top:68%;
 	left:39.71%;
 	font-size:13px;
 }
-.calendarMain > .calendarDay{	
+.calendarMain > .calendarDays{	
 	height:40px;
 	bottom:54.83%;
 	background-color: #e84c3d;
 	font-size:0;
 	color:#FFFFFF;
 }
-.calendarMain > .calendarDay > div{
+.calendarMain > .calendarDays > div{
 	display: inline-block;
     line-height: 40px;
     font-size: 13px;
