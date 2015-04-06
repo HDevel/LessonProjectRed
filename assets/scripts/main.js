@@ -4,6 +4,7 @@ $(document).ready(function() {
     $('.circleLoading').each(function(id, val) {
         circleLoadingInit(val, 100, 90, 10, 4);
     });
+    fillCalendar();
 });
 function circleLoadingInit(dom, radius, count, width, height) {
     var me = dom;
@@ -130,4 +131,68 @@ function addResizeLabel() {
         $(dom).addClass(classes[mClass].c);
         $(btn).html(classes[mClass].t);
     }
+}
+function fillCalendar() {
+    var dom = $('.dayDate'),
+        code = '',
+        dayIndex = -(new Date(
+                new Date().getFullYear(),
+                new Date().getMonth(),
+                1
+            ).getDay()) + 2,
+        months = [
+            'Январь',
+            'Февраль',
+            'Март',
+            'Апрель',
+            'Май',
+            'Июнь',
+            'Июль',
+            'Август',
+            'Сентябрь',
+            'Октябрь',
+            'Ноябрь',
+            'Декабрь'
+        ],
+        days = [
+            'Воскресенье',
+            'Понедельник',
+            'Вторник',
+            'Среда',
+            'Четверг',
+            'Пятница',
+            'Суббота'
+        ];
+    $('.calendarCurrentDayID').html(
+        days[new Date().getDay()]
+    );
+    $('.calendarCurrentDayDate').html(
+        new Date().getDate() + ' ' +
+        months[new Date().getMonth()] + ' ' +
+        new Date().getFullYear()
+    );
+
+    code += '<table>';
+    for (var week = 0; week < 5; week++) {
+        code += '<tr>';
+        for (var day = 0; day < 7; day++) {
+            var date = new Date(
+                    new Date().getFullYear(),
+                    new Date().getMonth(),
+                    dayIndex
+                ).getDate(),
+                cssClass = '';
+            if (dayIndex <= 0 || dayIndex > 7 && date <= 7) {
+                cssClass = ' class="previousMounth"';
+            }
+            if (date == new Date().getDate()) {
+                cssClass = ' class="currentDate"';
+            }
+            code += '<td' + cssClass + '>' + date + '</td>';
+            dayIndex++;
+        }
+        code += '</tr>';
+    }
+    code += '</table>';
+    dom.html(code);
 }
