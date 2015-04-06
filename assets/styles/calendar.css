@@ -1,61 +1,61 @@
-#moduleCalendar{	
-	background-color:#e5ebeb;
+#moduleCalendar{
+    background-color:#e5ebeb;
 }
 .calendarMain > div {
-	position:absolute;
-	left:0;
-	right:0;
+    position:absolute;
+    left:0;
+    right:0;
 }
 .calendarMain > .calendarHead {
-	height:32.25%;
-	text-align:center;
+    height:32.25%;
+    text-align:center;
 }
 .calendarHead > div{
 position:absolute;
 }
 .calendarMain > .calendarHead > .calendarCurrentDayID {
-	text-align:center;
-	font-weight:300;
-	top:28%;
-	left:21.42%;
-	right:21.42%;
-	font-size:34px;
+    text-align:center;
+    font-weight:300;
+    top:28%;
+    left:21.42%;
+    right:21.42%;
+    font-size:34px;
 }
-.calendarMain > .calendarHead > .calendarCurrentDayDate {	
-	text-align:center;
-	font-weight:300;	
-	top:68%;
-	left:39.71%;
-	font-size:13px;
+.calendarMain > .calendarHead > .calendarCurrentDayDate {
+    text-align:center;
+    font-weight:300;
+    top:68%;
+    left:39.71%;
+    font-size:13px;
 }
-.calendarMain > .calendarDays{	
-	height:40px;
-	bottom:54.83%;
-	background-color: #e84c3d;
-	font-size:0;
-	color:#FFFFFF;
+.calendarMain > .calendarDays{
+    height:40px;
+    bottom:54.83%;
+    background-color: #e84c3d;
+    font-size:0;
+    color:#FFFFFF;
 }
 .calendarMain > .calendarDays > div{
-	display: inline-block;
+    display: inline-block;
     line-height: 40px;
     font-size: 13px;
     text-transform: uppercase;
     font-weight: 300;
-	width:14.28%;
+    width:14.28%;
 }
 .previousMounth{
-	color:#b4b8b9;
+    color:#b4b8b9;
 }
 .dayDate{
-	top:51.61%;
-	bottom:6.45%;
-	color:#7e8182;
+    top:51.61%;
+    bottom:6.45%;
+    color:#7e8182;
 }
 .currentDate{
-	color:#FFFFFF;
-	background-color:#7e8182;
+    color:#FFFFFF;
+    background-color:#7e8182;
 }
 table{
-	width:100%;
-	height:100%;
+    width:100%;
+    height:100%;
 }
