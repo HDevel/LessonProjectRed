@@ -1,0 +1,54 @@
+#moduleNews {
+}
+
+#moduleNews > .moduleNewsTab > div{
+position: absolute;
+width:108px;
+height:37px;
+border-radius: 2px 2px 0px 0px;
+text-align: center;
+line-height: 37px;
+font-size: 13px;
+}
+#moduleNews > .moduleNewsTab > .moduleNewsCurrentTab{
+background-color: #e74c3c;
+left: 2px;
+color: #fff;
+}
+#moduleNews > .moduleNewsTab > .moduleNewsTab{
+background-color: #d3d5d6;
+left: 112px;
+color: #898c8d;
+}
+
+#moduleNews > .moduleNewsList {
+position: absolute;
+top: 37px;
+bottom: 0px; 
+border-radius: 2px;
+background-color: #e5eaeb;
+overflow: auto;
+}
+#moduleNews > .moduleNewsList > .moduleNewsListANew {
+margin:10px 20px 0px 20px;
+border-bottom: 1px solid #b5bdbe;
+height: 116px;
+font-size: 10px;
+text-align: left; 
+}
+#moduleNews > .moduleNewsList > .moduleNewsListANew > .Image{
+float:left;
+}
+#moduleNews > .moduleNewsList > .moduleNewsListANew > .Text{
+color: #7e8182;
+padding: 5px 0px 0px 105px;
+margin: left;
+}
+#moduleNews > .moduleNewsList > .moduleNewsListANew  > .ReadMoreLink{
+color: #e74c3c;
+text-decoration: underline;
+padding: 40px 0px 0px 105px;
+}  
+
+
+
