@@ -6,16 +6,14 @@
 	left:0;
 	right:0;
 }
-.calendarMain > .calendarHead {	
-	width:100%;
+.calendarMain > .calendarHead {
 	height:32.25%;
 	text-align:center;
 }
-#moduleCalendar > .calendarHead > div {
+.calendarHead > div{
 position:absolute;
 }
 .calendarMain > .calendarHead > .calendarCurrentDayID {
-	position:absolute;
 	text-align:center;
 	font-weight:300;
 	top:28%;
