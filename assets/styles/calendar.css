@@ -17,15 +17,16 @@ position:absolute;
     text-align:center;
     font-weight:300;
     top:28%;
-    left:21.42%;
-    right:21.42%;
+    left:0;
+    right:0;
     font-size:34px;
 }
 .calendarMain > .calendarHead > .calendarCurrentDayDate {
     text-align:center;
     font-weight:300;
     top:68%;
-    left:39.71%;
+    left:0;
+    right:0;
     font-size:13px;
 }
 .calendarMain > .calendarDays{
