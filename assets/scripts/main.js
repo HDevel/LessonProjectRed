@@ -252,17 +252,20 @@ function selectMTrack(status){
     $('.mPlayerHeadSongName').html(data.track);
     $('.mPlayerHeadSongAuthor').html(data.artist);
     musicPlayer.attr('src', data.url);
+    console.log(status);
     if (status != 'select') {
         playMTrack(true);
     }
 }
 function playMTrack(play){
-    if (musicPlayer[0].paused || play) {
+                          //play may be event info (onclick)
+    if (musicPlayer[0].paused || play == true) {
         musicPlayer[0].play();
         $('.mPlayerPause')
             .addClass('mPlayerPlay')
             .removeClass('mPlayerPause');
     } else {
+        console.log(5)
         musicPlayer[0].pause();
         $('.mPlayerPlay')
             .addClass('mPlayerPause')
