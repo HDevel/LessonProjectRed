@@ -5,6 +5,30 @@ $(document).ready(function() {
         circleLoadingInit(val, 100, 90, 10, 4);
     });
     fillCalendar();
+
+    var musicList = [
+            {
+                artist: 'Пушной',
+                track: 'Бритни',
+                url: 'assets/audio/Aleksandr-Pushnoj-Britni_(get-tune.net).mp3'
+            },
+            {
+                artist: 'Пушной',
+                track: 'Facebook',
+                url: 'assets/audio/Aleksandr-Pushnoj-Facebook_(get-tune.net).mp3'
+            },
+            {
+                artist: 'Пушной',
+                track: 'Улыбаемся и машем',
+                url: 'assets/audio/Pushnoj-Ulybaemsya-i-mashem_(get-tune.net).mp3'
+            },
+            {
+                artist: 'SKA-P',
+                track: 'Welcome to hell',
+                url: 'assets/audio/SKA-P-Ska-p-Welcome-to-hell_(get-tune.net)-2.mp3'
+            }
+        ];
+    activateMPlayer(musicList);
 });
 function circleLoadingInit(dom, radius, count, width, height) {
     var me = dom;
@@ -195,4 +219,53 @@ function fillCalendar() {
     }
     code += '</table>';
     dom.html(code);
+}
+var musicPlayer;
+function activateMPlayer(playlist) {
+    var doc = new DocumentFragment();
+    musicPlayer = $('#moduleMusicPlayer audio');
+
+    playlist.forEach(function(value, index) {
+        var div = document.createElement('div');
+        $(div).data('track', value);
+        $(div).html(value.artist + ' - ' + value.track);
+        $(div).click(selectMTrack);
+        $(doc).append(div);
+        if (index == 0) {
+            selectMTrack.call(div, 'select');
+        }
+    });
+    $('.mPlayerList').html('');
+    $('.mPlayerList').append(doc);
+    $('.mPlayerPlayButton').click(playMTrack);
+    $('#moduleMusicPlayer audio')[0].ontimeupdate = function() {
+        var percent = (this.currentTime / this.duration) * 100;
+        $('.mPlayerHeadIndicatorLine > div').css('width', percent + '%');
+    };
+}
+function selectMTrack(status){
+    var me = $(this),
+        data = me.data('track');
+    $('.mPlayerList > div').removeClass('thistrack');
+    me.addClass('thistrack');
+
+    $('.mPlayerHeadSongName').html(data.track);
+    $('.mPlayerHeadSongAuthor').html(data.artist);
+    musicPlayer.attr('src', data.url);
+    if (status != 'select') {
+        playMTrack(true);
+    }
+}
+function playMTrack(play){
+    if (musicPlayer[0].paused || play) {
+        musicPlayer[0].play();
+        $('.mPlayerPause')
+            .addClass('mPlayerPlay')
+            .removeClass('mPlayerPause');
+    } else {
+        musicPlayer[0].pause();
+        $('.mPlayerPlay')
+            .addClass('mPlayerPause')
+            .removeClass('mPlayerPlay');
+    }
 }
