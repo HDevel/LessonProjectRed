@@ -5,7 +5,15 @@
     position: absolute;
 }
 
-#moduleMusicPlayer  > .mPlayerHeadButton{
+#moduleMusicPlayer  > .mPlayerHead{
+    border-radius: 0px 3px 3px 0px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 70px; 
+    background-color: #e5eaeb;
+}
+#moduleMusicPlayer  > .mPlayerHead > .mPlayerPlayButton{
     border-radius: 3px;
     left: 0px;
     top: 0px;
@@ -13,26 +21,19 @@
     width:80px;
     background-color: #e74c3c;
     z-index:1;
+    cursor: pointer;
+    background-image: url('../images/MPlayerPlayIcon.png');
+    -webkit-transition: all 200ms;
 }
-#moduleMusicPlayer  > .mPlayerHeadButtonSmallIcon{
-    left: 3px;
-    top: 21px;
-    height: 70px; 
-    width:80px;
-    z-index:1;
+#moduleMusicPlayer  > .mPlayerHead > .mPlayerPlayButton.mPlayerPlay{
+    background-position: 0 0;
 }
-
-#moduleMusicPlayer  > .mPlayerHead{
-    border-radius: 0px 3px 3px 0px;
-    left: 77px;
-    right: 0px;
-    top: 0px;
-    height: 70px; 
-    background-color: #e5eaeb;
+#moduleMusicPlayer  > .mPlayerHead > .mPlayerPlayButton.mPlayerPause{
+    background-position: 0 100%;
 }
 #moduleMusicPlayer  > .mPlayerHead >  div{
     position: absolute;
-    left:13px;
+    left:90px;
 }
 #moduleMusicPlayer  > .mPlayerHead > .mPlayerHeadSongName{
     top:10px;
