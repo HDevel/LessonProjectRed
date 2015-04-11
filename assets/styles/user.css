@@ -1,21 +1,20 @@
 #moduleUser{
     
-}#moduleUser > div{
-    border-radius: 3px;
-    left: 0;
-    top: 0;
 }
-#moduleUser > .UserPicture > img{
+#moduleUser > div{
+    border-radius: 3px;
+  
+}
+#moduleUser > .userPicture > img{
     position: absolute;
     left:0;
-    right: 0;
     top: 0;
     margin: 0;
     bottom: 220px;
     width: 100%;
 
 }
-.Avatar { 
+.userAvatar { 
     position: absolute;
     left:15px;
     top: 170px;
@@ -24,20 +23,90 @@
     font-size: 0;
     z-index: 1;
 }
-.UserName {
+.userName {
     position: absolute;
+    left: 0;
+    right: 0;
     background-color: #e5eaeb;
     height: 72px;
-    bottom: 147px;
     top: 230px;
-    width: 100%;
     border-radius: 3px;
 
 }
-.Name{
+.profileName {
     position: absolute;
     color: #2c3e50;
     padding-top: 19px;
-    right: 20%;
+    left: 45%;
     font-size: 17px;
+}
+.profession{
+	position: absolute;
+    color: #2c3e50;
+    padding-top: 44px;
+    left: 45%;
+    font-size: 9px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.userInfo{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #e5eaeb;
+    height: 72px;
+    top: 303px;
+    border-radius: 3px;
+}
+.userInfo > div{
+    font-size: 13px;
+    margin: 0 auto;
+    text-align: left;
+    font-weight: 400;
+    padding: 15px 14px 16px 21px;
+    color: #7e8182;
+}
+.userInfo > div > a{
+     color: #e74c3c;
+}
+.userMenuIcons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #e5eaeb;
+    height: 72px;
+    top: 376px;
+    border-radius: 3px;
+    
+}
+.userMenuIcons > div{
+
+    display: inline-block;
+    margin-top: 14px;
+}
+
+.photoIcon {
+    position: absolute;
+    width: 33.3%;
+    height: 46px;
+    left: 0;
+}
+.likesIcon {
+  
+    width: 33.3%;
+    height: 46px;
+    border:  solid #7e8182;
+    border-width: 0px 1px;
+}
+.messageIcon {
+   position: absolute;
+   width: 33.3%;
+   right: 0;
+   height: 46px;
+}
+.numbers{
+    margin-top: 4px;
+    font-weight: 300;
+    color: #7e8182;
+    font-size: 13px;
 }
